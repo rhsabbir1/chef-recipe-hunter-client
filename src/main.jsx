@@ -6,7 +6,6 @@ import router from './routers/Routers'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router}></RouterProvider>
 )
