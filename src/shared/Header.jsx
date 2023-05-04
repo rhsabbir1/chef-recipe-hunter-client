@@ -26,7 +26,7 @@ const Header = () => {
             
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Rofail Pic</Nav.Link>
+            <img className='w-25 me-2 rounded rounded-circle'  src={user?.photoURL} alt="" />
             {
               user ?
               <button onClick={handleLogOut} className='btn btn-secondary'>Log Out</button>

@@ -33,6 +33,7 @@ const Registration = () => {
             registation(email, password)
                 .then(result => {
                     const creatUser = result.user;
+                    profail(name ,photoUrl )
                     console.log(creatUser)
                 })
                 .catch(err => {
@@ -42,7 +43,7 @@ const Registration = () => {
            
         }
 
-        // form.reset()
+        form.reset()
     }
 
 

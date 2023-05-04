@@ -23,8 +23,8 @@ const AuthProvider = ({ children }) => {
     }
 
     const profail = (name, photoUrl) => {
-        updateProfile(user, {
-            displayName: {name}, photoURL: {photoUrl}
+        updateProfile(auth.currentUser, {
+            displayName:name,photoURL:photoUrl
         })
     }
 
