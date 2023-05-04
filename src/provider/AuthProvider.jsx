@@ -8,13 +8,17 @@ export const AuthContex = createContext(null)
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
+    const [loader , setLoader] = useState(true)
+
 
 
     const registation = (email, password) => {
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const login = (email, password) => {
+        setLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -27,6 +31,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, getUser => {
             setUser(getUser)
+            setLoader(false)
         })
         return () => {
             unsubscribe()
@@ -34,6 +39,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     const logOut = () => {
+        setLoader(true)
         return signOut(auth)
     }
 
@@ -43,7 +49,8 @@ const AuthProvider = ({ children }) => {
         login,
         user,
         logOut,
-        profail
+        profail,
+        loader
     }
     return (
         <AuthContex.Provider value={authInfo}>
