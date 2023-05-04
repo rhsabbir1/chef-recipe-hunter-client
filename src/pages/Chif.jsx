@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import ChefDetails from './ChefDetails';
 import { Container } from 'react-bootstrap';
 import Banner from '../section/Banner';
+import ContactSection from '../section/ContactSection';
 
 
 const Chif = () => {
@@ -30,6 +31,9 @@ const Chif = () => {
                         ></ChefDetails>)
                     }
                 </Row>
+            </Container>
+            <Container>
+               <ContactSection></ContactSection>
             </Container>
         </div>
     );

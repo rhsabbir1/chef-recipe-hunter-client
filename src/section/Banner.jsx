@@ -6,10 +6,10 @@ const Banner = () => {
         <div>
             <div className="card mb-3  my-4">
                 <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-md-8">
                         <img src="https://images.wsj.net/im-581988/M" className="img-fluid rounded-start" alt="..." />
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-4">
                         <div className="card-body">
                             <h5 className="card-title">Welcome Indian Food cafe</h5>
                             <p className="card-text">The challenge that restaurants have is that people come in, eat, pay, and leave. There’s little opportunity to build relationships and invite diners back.
