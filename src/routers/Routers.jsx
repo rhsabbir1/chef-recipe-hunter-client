@@ -5,6 +5,7 @@ import Chif from '../pages/Chif';
 import ViewRecipes from '../pages/ViewRecipes';
 import Login from '../shared/form/Login';
 import Registration from '../shared/form/Registration';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       ,
       {
         path: '/:id',
-        element: <ViewRecipes></ViewRecipes>,
+        element: <PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
         loader: ({ params }) => fetch(`https://chif-recipy-server-side.vercel.app/chef/${params.id}`)
       },
       {
