@@ -6,11 +6,13 @@ import ViewRecipes from '../pages/ViewRecipes';
 import Login from '../shared/form/Login';
 import Registration from '../shared/form/Registration';
 import PrivateRoute from './PrivateRoute';
+import Errorpage from '../pages/Errorpage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <Errorpage></Errorpage>,
     children: [
       {
         path: '/',
