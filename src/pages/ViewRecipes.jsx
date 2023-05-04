@@ -10,7 +10,7 @@ const ViewRecipes = () => {
     console.log(chifAllData)
 
     return (
-        <div>
+        <div className='py-4'>
             <Container className='my-4 d-flex'>
                 <div>
                     <Image src={chef_Picture} fluid />
