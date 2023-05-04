@@ -20,7 +20,7 @@ const ChefDetails = ({ chefDetail }) => {
                         <p>Nubber of Recipes : {numbers_of_recipes}</p>
                         <p>Years of Experience : {years_of_experience}</p>
                     </Card.Text>
-                    <Link to={`/${id}`}><button>View Recipes</button></Link>
+                    <Link to={`/${id}`}><button className='btn btn-primary'>View Recipes</button></Link>
                 </Card.Body>
             </Card>
         </Col>
