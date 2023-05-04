@@ -8,7 +8,7 @@ import { AuthContex } from '../../provider/AuthProvider';
 const Registration = () => {
 
     const [error, setError] = useState('')
-    const { registation, profail } = useContext(AuthContex)
+    const { registation, profail, emailSingIn ,gitHubsingIng } = useContext(AuthContex)
 
 
     const handleForm = event => {
@@ -46,6 +46,22 @@ const Registration = () => {
         form.reset()
     }
 
+    const googleSingIn = ()=>{
+        emailSingIn()
+        .then()
+        .catch(err => {
+            setError(err.message)
+        })
+    }
+
+    const githubSingIn = ()=>{
+        gitHubsingIng()
+        .then()
+        .catch(err => {
+            setError(err.message)
+        })
+
+    }
 
     return (
         <div className='w-25 mx-auto py-4' >
@@ -72,6 +88,8 @@ const Registration = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Register</button>
                 <p className='text-danger'>{error}</p>
+                <button onClick={googleSingIn} className='me-2 btn btn-danger'>Login With Google</button>
+                <button onClick={githubSingIn} className='btn btn-danger'>Login With Git hub</button>
             </form>
             <p>Already Have an account please <Link to="/login">Login</Link></p>
         </div>
