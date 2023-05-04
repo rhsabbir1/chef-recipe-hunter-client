@@ -26,8 +26,6 @@ const Registration = () => {
             setError(err.message)
         })
 
-
-        console.log(name, photoUrl , email , password)
         form.reset()
     } 
 
@@ -35,23 +33,23 @@ const Registration = () => {
     return (
         <div className='w-25 mx-auto py-4' >
             <form onSubmit={handleForm}>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" >Name</label>
-                    <input type="text" name='name' placeholder='Your name' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label" >Name</label>
+                    <input type="text" name='name' placeholder='Your name' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" >Photo Url</label>
-                    <input type="text" name='photoUrl' placeholder='Photo Url' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label" >Photo Url</label>
+                    <input type="text" name='photoUrl' placeholder='Photo Url' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" >Email address</label>
-                    <input type="email" name='email' placeholder='Email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label" >Email address</label>
+                    <input type="email" name='email' placeholder='Email' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name='password' placeholder='Password' class="form-control" id="exampleInputPassword1" required />
+                <div className="mb-3">
+                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <input type="password" name='password' placeholder='Password' className="form-control" id="exampleInputPassword1" required />
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" className="btn btn-primary">Register</button>
                 <p className='text-danger'>{error}</p>
             </form>
             <p>Already Have an account please <Link to="/login">Login</Link></p>

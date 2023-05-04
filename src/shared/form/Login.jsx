@@ -1,21 +1,46 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContex } from '../../provider/AuthProvider';
 
 
 const Login = () => {
+    const [error , setError] = useState('')
+
+    const {login} = useContext(AuthContex)
+
+    const handleLogin = event =>{
+        event.preventDefault()
+        setError('')
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        login(email,password)
+        .then(result =>{
+            const logedUser = result.user;
+            console.log(logedUser)
+        })
+        .catch(err=>{
+            setError(err.message)
+        })
+        console.log( email , password)
+        form.reset()
+    }
+
+
     return (
         <div className='w-25 mx-auto py-4' >
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" >Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+            <form onSubmit={handleLogin}>
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label" >Email address</label>
+                    <input type="email" name='email' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" required />
+                <div className="mb-3">
+                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <input type="password" name='password' className="form-control" id="exampleInputPassword1" required />
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Log in</button>
+                <button type="submit" className="btn btn-primary">Log in</button>
             </form>
             <p>New To Chif Hunt <Link to="/register">Register Now</Link></p>
         </div>
