@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
+import Login from './form/Login';
 
 const Header = () => {
     return (
@@ -18,9 +20,7 @@ const Header = () => {
           </Nav>
           <Nav>
             <Nav.Link href="#deets">Rofail Pic</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Log Out
-            </Nav.Link>
+            <Link to='/login'>Login</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -38,10 +38,7 @@ const ChefRecipes = ({ recipe }) => {
                     <ToastContainer />
                 </Card.Text>
             </Card.Body>
-            
         </Card>
-
-
     );
 };
 

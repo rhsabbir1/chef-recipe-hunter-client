@@ -33,6 +33,8 @@ const ViewRecipes = () => {
                     }
                 </CardGroup>
             </Container>
+
+            
         </div>
     );
 };
