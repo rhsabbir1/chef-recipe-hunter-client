@@ -7,6 +7,7 @@ import Login from '../shared/form/Login';
 import Registration from '../shared/form/Registration';
 import PrivateRoute from './PrivateRoute';
 import Errorpage from '../pages/Errorpage';
+import Blog from '../pages/Blogs/Blog';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Registration></Registration>
+      },
+      {
+        path: '/blog',
+        element :<Blog></Blog> 
       }
     ]
   }

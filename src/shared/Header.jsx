@@ -23,10 +23,11 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/blog">Blog</Nav.Link>
             
           </Nav>
           <Nav>
-            <img className='w-25 me-2 rounded rounded-circle'  src={user?.photoURL} alt="" />
+            <img className='w-25 me-2 rounded rounded-circle' title={user?.displayName} src={user?.photoURL} alt="" />
             {
               user ?
               <button onClick={handleLogOut} className='btn btn-secondary'>Log Out</button>

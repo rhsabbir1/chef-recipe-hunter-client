@@ -20,12 +20,12 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 const logedUser = result.user;
+                console.log(logedUser)
                 navigate(from)
             })
             .catch(err => {
                 setError(err.message)
             })
-        console.log(email, password)
         form.reset()
     }
 
